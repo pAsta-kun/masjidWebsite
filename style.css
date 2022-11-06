@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+body{
+    height: 100vh;
+    width: 100vw;
+    margin: 0px;
+    font-family: "Poppins", sans-serif;
+    color: white;
+
+}
+h2{
+    font-size: 75px;
+    margin: 0px;
+}
+.pageOne{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    position: relative;
+    background-image: url("mosque.jpg");
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+
+}
+.info{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+a {
+    background: linear-gradient(to right, #f18f22, #f18f22 50%, #fff 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 300ms ease;
+  }
+a:hover{
+    background-position: 0 50%;
+}
+.pageTwo{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("quran.jpg");
+    position: relative;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about, .prayerTimes{
+    width: 50vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 0, .25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.prayerTimes{
+    background-color: rgba(255, 255, 255, 0.25);
+}
+.slider{
+    width: 80%;
+    height: 60%;
+    background-color: rgb(0, 0, 0, .50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text{
+    width: 70%;
+    height: 100%;
+    padding: 7%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#next{
+    background-color: rgba(255, 255, 255, 0.25);
+    border-style: none;
+    border-radius: 70%;
+    width: 100px;
+    height: 100px;
+}
