@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Masjid Website Template</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/60ab0b254c.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="pageOne">
@@ -26,14 +27,31 @@
         <div class="about">
             <div class="slider">
                 <span class="text">
-                    <h3> About Us</h3>
-                    <h4> Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</h4> 
+                    <h3 id="title"> About Us</h3>
+                    <h4 id="textInfo"> Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</h4> 
                 </span>
-                <input type="button" id="next">
+                <button id="next"> <i class="fa-solid fa-arrow-right"></i> </button>
             </div>
         </div>
-        <div class="prayerTimes"></div>
+        <div class="prayerTimes">
+
+        </div>
     </div>
     
 </body>
+<script>
+    let titles = ["About Us", "Our Mission", "Our Members"]
+    let info = ["Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.", "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual.", "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing."]
+    let counter = 0;
+    const button = document.getElementById('next');
+    button.addEventListener('click', function changeText(){
+        if(counter == 2)
+            counter = 0;
+        else counter++;
+
+        document.getElementById('title').innerHTML = titles[counter];
+        document.getElementById('textInfo').innerHTML = info[counter];
+
+    })
+</script>
 </html>
