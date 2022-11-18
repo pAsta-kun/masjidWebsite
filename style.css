@@ -63,27 +63,91 @@ a:hover{
 .prayerTimes{
     background-color: rgba(255, 255, 255, 0.25);
 }
-.slider{
+.slider, .table{
     width: 80%;
     height: 60%;
     background-color: rgb(0, 0, 0, .50);
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.text{
-    width: 70%;
-    height: 100%;
-    padding: 7%;
+    flex-direction: column;
     text-align: center;
+}
+.table{
+    color: black;
+    background-color: rgba(255, 255, 255, 0.35);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+}
+table, th, td{
+    border: 1px solid black;
+}
+.heading{
+    width: 100%;
+}
+table{
+    width: 80%;
+    height: 60%;
+}
+.text{ 
+    padding: 7%;
 }
 #next{
     background-color: rgba(255, 255, 255, 0.25);
     border-style: none;
     border-radius: 70%;
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
 }
+@keyframes nextHover {
+    0% {
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.2);
+    }
+}
+
+
+@media only screen and (min-width:1281px) {
+    #next:hover{
+        animation: .35s nextHover 1 forwards;
+    }
+}
+@media only screen and (max-width: 599px) {
+
+    h2{
+        font-size: 50px;
+    }
+    .info{
+        gap: 25px;
+    }
+    .pageOne{
+        background-position: 51.59%, 50%;
+        
+    }
+    .pageTwo{
+        flex-direction: column;
+    }
+    .about, .prayerTimes{
+        width: 100vw;
+        height: 50vh;
+    }
+    .slider, .table{
+        width: 80%;
+        height: 80%;
+    }
+    .text{
+        height: 70%;
+        padding-bottom: 0%;
+    }
+    #next{
+        width: 60px;
+        height: 60px;
+    }
+}
+
+
